@@ -16,6 +16,7 @@ var Splinter = require('splinter');
 
 // create a new instance
 var splinter = new Splinter(function (chunk) {
+    // this converts the chunk into a value that can be matched against
     return typeof(chunk);
 });
 
