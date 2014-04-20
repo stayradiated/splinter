@@ -1,7 +1,7 @@
 {
   "name": "splinter",
-  "version": "0.0.0",
-  "description": "Split an object-stream into multiple streams by filtering the chunks.",
+  "version": "0.0.1",
+  "description": "Split an object-mode stream into multiple streams by filtering the chunks.",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec test"
