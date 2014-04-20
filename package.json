@@ -1,0 +1,37 @@
+{
+  "name": "splinter",
+  "version": "0.0.0",
+  "description": "Split an object-stream into multiple streams by filtering the chunks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stayradiated/splinter"
+  },
+  "keywords": [
+    "split",
+    "stream",
+    "filter",
+    "object",
+    "mode",
+    "multiple",
+    "pipe",
+    "pass",
+    "through"
+  ],
+  "author": "George Czabania",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stayradiated/splinter/issues"
+  },
+  "homepage": "https://github.com/stayradiated/splinter",
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "chai": "^1.9.1"
+  },
+  "dependencies": {
+    "underscore": "^1.6.0"
+  }
+}
