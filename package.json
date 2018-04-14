@@ -1,10 +1,15 @@
 {
   "name": "splinter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Split an object-mode stream into multiple streams by filtering the chunks.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha -R spec test"
+    "build": "pkg-clean && rollup -c",
+    "prepublish": "npm run build",
+    "test": "pkg-test",
+    "flow": "pkg-flow",
+    "coverage": "pkg-coverage",
+    "lint": "pkg-lint"
   },
   "repository": {
     "type": "git",
@@ -28,10 +33,29 @@
   },
   "homepage": "https://github.com/stayradiated/splinter",
   "devDependencies": {
-    "mocha": "^1.18.2",
-    "chai": "^1.9.1"
+    "@mishguru/package": "^2.2.2",
+    "rollup": "^0.57.1"
+  },
+  "babel": {
+    "presets": [
+      "flow",
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   },
   "dependencies": {
-    "underscore": "^1.6.0"
+    "fast-equals": "^1.2.1"
   }
 }
